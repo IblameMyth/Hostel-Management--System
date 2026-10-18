@@ -13,10 +13,6 @@ CREATE TABLE users (
   must_change_password TINYINT(1) NOT NULL DEFAULT 1,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
-
--- Starter Warden account requested for the mini-project.
--- Email: warden123@gmail.com | Password: warden123
--- This is a PHP password_hash() compatible hash, not a plaintext password.
 INSERT INTO users (full_name, email, password_hash, role, must_change_password)
 VALUES ('Hostel Warden', 'warden123@gmail.com', '$2y$12$7/VSx7ZjD62gSrR6Nl98DeHuhABovlIz5BJEZ.NX7KU5Qzy/6dsTW', 'warden', 1);
 
@@ -67,8 +63,3 @@ CREATE TABLE announcements (
   is_published TINYINT(1) NOT NULL DEFAULT 1,
   CONSTRAINT fk_announcements_author FOREIGN KEY (created_by) REFERENCES users(id)
 ) ENGINE=InnoDB;
-
--- Student users are created by the warden in the future backend. Store password_hash(),
--- never a plaintext password. Enforce permissions in backend code, not in HTML/CSS.
--- Warden: create/edit students, mark attendance, review requests, publish announcements.
--- Student: read own attendance and published announcements, submit own requests.
