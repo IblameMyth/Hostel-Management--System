@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Warden | Ycce Hostel
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <input class="menu-toggle" id="menu-toggle" type="checkbox"/>
+  <div class="app-shell">
+   <aside class="sidebar">
+    <a class="brand" href="warden.html">
+     <span class="brand-mark">
+      Y
+     </span>
+     <span>
+      Ycce
+      <span class="brand-light">
+       Hostel
+      </span>
+     </span>
+    </a>
+    <p class="nav-label">
+     WORKSPACE
+    </p>
+    <a class="nav-link active" href="warden.html">
+     <span>
+      ▦
+     </span>
+     Overview
+    </a>
+    <a class="nav-link" href="#students">
+     <span>
+      ♧
+     </span>
+     Students
+    </a>
+    <a class="nav-link" href="#attendance">
+     <span>
+      &checkmark;
+     </span>
+     Attendance
+    </a>
+    <a class="nav-link" href="#requests">
+     <span>
+      &nearrow;
+     </span>
+     Requests
+    </a>
+    <a class="nav-link" href="#announcements">
+     <span>
+      ▤
+     </span>
+     Announcements
+    </a>
+    <div class="sidebar-bottom">
+     <div class="user-mini">
+      <span class="avatar warden-avatar">
+       W
+      </span>
+      <span>
+       <b data-current-user="">
+        Hostel Warden
+       </b>
+       <small>
+        Warden role
+       </small>
+      </span>
+     </div>
+     <a class="nav-link logout" href="login.html">
+      <span>
+       &rarrhk;
+      </span>
+      Sign out
+     </a>
+    </div>
+   </aside>
+   <label class="menu-overlay" for="menu-toggle">
+   </label>
+   <main class="main-area">
+    <header class="topbar">
+     <label aria-label="Open navigation" class="mobile-menu" for="menu-toggle">
+      ☰
+     </label>
+     <div>
+      <span class="topbar-kicker">
+       HOSTEL MANAGEMENT
+      </span>
+      <strong>
+       Warden workspace
+      </strong>
+     </div>
+     <a class="topbar-user" href="login.html">
+      <span class="avatar warden-avatar">
+       W
+      </span>
+      <span data-current-user="">
+       Hostel Warden
+      </span>
+     </a>
+    </header>
+    <div class="content">
+     <div class="page-heading">
+      <div>
+       <p class="eyebrow">
+        OVERVIEW
+       </p>
+       <h1>
+        Warden workspace
+       </h1>
+      </div>
+      <span class="role-chip warden-chip">
+       Warden
+      </span>
+     </div>
+     <section class="notice-bar">
+      <span class="notice-icon">
+       i
+      </span>
+      <div>
+       <b>
+        Your permissions
+       </b>
+      </div>
+     </section>
+     <div class="section-heading" id="students">
+      <div>
+       <h2>
+        Student records
+       </h2>
+      </div>
+      <a class="button primary" href="#create-student">
+       ＋ Add student
+      </a>
+     </div>
+     <section class="panel table-panel">
+      <div class="table-scroll">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Student name
+          </th>
+          <th>
+           Gmail address
+          </th>
+          <th>
+           Role
+          </th>
+         </tr>
+        </thead>
+        <tbody id="demo-student-list">
+         <tr>
+          <td colspan="3">
+           No student accounts yet.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </section>
+     <section class="panel" id="create-student">
+      <div class="panel-heading">
+       <div>
+        <h2>
+         Create student login
+        </h2>
+       </div>
+       <span class="panel-icon">
+        ＋
+       </span>
+      </div>
+      <form class="stack-form" data-student-create-form="">
+       <div class="field">
+        <label for="new-student-name">
+         Student full name
+        </label>
+        <input id="new-student-name" placeholder="Enter student name" required=""/>
+       </div>
+       <div class="field">
+        <label for="new-student-email">
+         Student Gmail address
+        </label>
+        <input id="new-student-email" placeholder="student@gmail.com" required="" type="email"/>
+       </div>
+       <div class="field">
+        <label for="new-student-password">
+         Base password
+        </label>
+        <input id="new-student-password" minlength="6" required="" type="text" value="student123"/>
+       </div>
+       <button class="button primary" type="submit">
+        Create student account
+       </button>
+       <p aria-live="polite" class="form-message" id="student-create-message">
+       </p>
+      </form>
+     </section>
+     <div class="two-column">
+      <section class="panel" id="attendance">
+       <div class="panel-heading">
+        <div>
+         <h2>
+          Attendance
+         </h2>
+        </div>
+        <span class="panel-icon">
+         &checkmark;
+        </span>
+       </div>
+       <label for="attendance-date">
+        Attendance date
+       </label>
+       <input id="attendance-date" type="date"/>
+       <div class="attendance-register" id="warden-attendance-register">
+        <p class="muted">
+         Create student accounts first to mark attendance.
+        </p>
+       </div>
+       <p aria-live="polite" class="form-message" id="attendance-message">
+       </p>
+      </section>
+      <section class="panel" id="requests">
+       <div class="panel-heading">
+        <div>
+         <h2>
+          Student requests
+         </h2>
+        </div>
+        <span class="panel-icon">
+         &nearrow;
+        </span>
+       </div>
+       <div class="requests-list" id="warden-requests-list">
+        <div class="empty-state small-empty">
+         <span class="empty-icon">
+          ▤
+         </span>
+         <p>
+          No requests to review yet.
+         </p>
+        </div>
+       </div>
+      </section>
+     </div>
+     <section class="panel announcement-panel" id="announcements">
+      <div class="panel-heading">
+       <div>
+        <h2>
+         Publish an announcement
+        </h2>
+       </div>
+      </div>
+      <form class="stack-form" data-announcement-form="">
+       <div class="field">
+        <label for="announcement-title">
+         Announcement title
+        </label>
+        <input id="announcement-title" maxlength="180" placeholder="Enter a short title" required=""/>
+       </div>
+       <div class="field">
+        <label for="announcement-message">
+         Message
+        </label>
+        <textarea id="announcement-message" placeholder="Write your announcement..." required="" rows="3"></textarea>
+       </div>
+       <button class="button primary" type="submit">
+        Publish announcement
+       </button>
+       <p aria-live="polite" class="form-message" id="announcement-form-message">
+       </p>
+      </form>
+     </section>
+    </div>
+   </main>
+  </div>
+  <script src="js/auth-demo.js">
+  </script>
+ </body>
+</html>

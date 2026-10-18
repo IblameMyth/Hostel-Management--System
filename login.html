@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Ycce Hostel | Login
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="login-page">
+  <main class="login-wrap">
+   <a class="brand login-brand" href="login.html">
+    <span class="brand-mark">
+     Y
+    </span>
+    <span>
+     Ycce
+     <span class="brand-light">
+      Hostel
+     </span>
+    </span>
+   </a>
+   <section class="login-card">
+    <p class="eyebrow">
+     HOSTEL MANAGEMENT
+    </p>
+    <h1>
+     Sign in
+    </h1>
+    <form data-login-form="">
+     <label for="email">
+      Gmail / email
+     </label>
+     <input autocomplete="username" id="email" name="email" placeholder="you@gmail.com" required="" type="email"/>
+     <label for="password">
+      Password
+     </label>
+     <input autocomplete="current-password" id="password" name="password" placeholder="Enter password" required="" type="password"/>
+     <button class="button primary full" type="submit">
+      Sign in
+      <span aria-hidden="true">
+       &rarr;
+      </span>
+     </button>
+     <p aria-live="polite" class="form-message error" hidden="" id="login-message">
+     </p>
+    </form>
+    <p class="small muted login-note">
+     Students get their login from the warden.
+    </p>
+   </section>
+   <script src="js/auth-demo.js">
+   </script>
+  </main>
+ </body>
+</html>

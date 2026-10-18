@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Student | Ycce Hostel
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <input class="menu-toggle" id="menu-toggle" type="checkbox"/>
+  <div class="app-shell">
+   <aside class="sidebar">
+    <a class="brand" href="student.html">
+     <span class="brand-mark">
+      Y
+     </span>
+     <span>
+      Ycce
+      <span class="brand-light">
+       Hostel
+      </span>
+     </span>
+    </a>
+    <p class="nav-label">
+     MY HOSTEL
+    </p>
+    <a class="nav-link active" href="student.html">
+     <span>
+      ▦
+     </span>
+     My dashboard
+    </a>
+    <a class="nav-link" href="#attendance">
+     <span>
+      &checkmark;
+     </span>
+     My attendance
+    </a>
+    <a class="nav-link" href="#requests">
+     <span>
+      &nearrow;
+     </span>
+     Submit a request
+    </a>
+    <a class="nav-link" href="#announcements">
+     <span>
+      ▤
+     </span>
+     Announcements
+    </a>
+    <div class="sidebar-bottom">
+     <div class="user-mini">
+      <span class="avatar student-avatar">
+       S
+      </span>
+      <span>
+       <b data-current-user="">
+        Student
+       </b>
+       <small>
+        Student role
+       </small>
+      </span>
+     </div>
+     <a class="nav-link logout" href="login.html">
+      <span>
+       &rarrhk;
+      </span>
+      Sign out
+     </a>
+    </div>
+   </aside>
+   <label class="menu-overlay" for="menu-toggle">
+   </label>
+   <main class="main-area">
+    <header class="topbar">
+     <label aria-label="Open navigation" class="mobile-menu" for="menu-toggle">
+      ☰
+     </label>
+     <div>
+      <span class="topbar-kicker">
+       HOSTEL MANAGEMENT
+      </span>
+      <strong>
+       Student portal
+      </strong>
+     </div>
+     <a class="topbar-user" href="login.html">
+      <span class="avatar student-avatar">
+       S
+      </span>
+      <span data-current-user="">
+       Student
+      </span>
+     </a>
+    </header>
+    <div class="content">
+     <div class="page-heading">
+      <div>
+       <p class="eyebrow">
+        MY HOSTEL
+       </p>
+       <h1>
+        My dashboard
+       </h1>
+      </div>
+      <span class="role-chip student-chip">
+       Student
+      </span>
+     </div>
+     <div class="student-cards">
+      <a class="action-card" href="#attendance">
+       <span class="action-icon">
+        &checkmark;
+       </span>
+       <b>
+        My attendance
+       </b>
+       <span>
+        View attendance records
+       </span>
+       <span class="card-arrow">
+        &rarr;
+       </span>
+      </a>
+      <a class="action-card" href="#requests">
+       <span class="action-icon purple">
+        &nearrow;
+       </span>
+       <b>
+        Submit a request
+       </b>
+       <span>
+        Send a request to your warden
+       </span>
+       <span class="card-arrow">
+        &rarr;
+       </span>
+      </a>
+      <a class="action-card" href="#announcements">
+       <span class="action-icon amber">
+        ▤
+       </span>
+       <b>
+        Announcements
+       </b>
+       <span>
+        Read hostel updates
+       </span>
+       <span class="card-arrow">
+        &rarr;
+       </span>
+      </a>
+     </div>
+     <section class="panel" id="attendance">
+      <div class="panel-heading">
+       <div>
+        <h2>
+         My attendance
+        </h2>
+       </div>
+       <span class="panel-icon">
+        &checkmark;
+       </span>
+      </div>
+      <div class="empty-state small-empty" id="student-attendance-list">
+       <span class="empty-icon">
+        ▦
+       </span>
+       <h3>
+        No attendance records yet
+       </h3>
+       <p>
+        Your attendance will appear here when recorded by the warden.
+       </p>
+      </div>
+     </section>
+     <section class="panel" id="requests">
+      <div class="panel-heading">
+       <div>
+        <h2>
+         Submit a request
+        </h2>
+       </div>
+      </div>
+      <form action="#" class="stack-form" data-student-request-form="" method="post">
+       <div class="field">
+        <label for="request-type">
+         Request type
+        </label>
+        <select id="request-type" required="">
+         <option disabled="" selected="" value="">
+          Select request type
+         </option>
+         <option>
+          Leave request
+         </option>
+         <option>
+          Maintenance
+         </option>
+         <option>
+          Other
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="request-subject">
+         Subject
+        </label>
+        <input id="request-subject" placeholder="Brief subject" required=""/>
+       </div>
+       <div class="field">
+        <label for="request-details">
+         Details
+        </label>
+        <textarea id="request-details" placeholder="Explain your request..." required="" rows="3"></textarea>
+       </div>
+       <button class="button primary" type="submit">
+        Submit request
+       </button>
+       <p aria-live="polite" class="form-message" id="student-request-message">
+       </p>
+      </form>
+     </section>
+     <section class="panel" id="announcements">
+      <div class="panel-heading">
+       <div>
+        <h2>
+         Announcements
+        </h2>
+       </div>
+       <span class="panel-icon">
+        ▤
+       </span>
+      </div>
+      <div class="empty-state small-empty" id="student-announcements-list">
+       <span class="empty-icon">
+        ▤
+       </span>
+       <h3>
+        No announcements yet
+       </h3>
+       <p>
+        New hostel notices will appear here.
+       </p>
+      </div>
+     </section>
+    </div>
+   </main>
+  </div>
+  <script src="js/auth-demo.js">
+  </script>
+ </body>
+</html>
